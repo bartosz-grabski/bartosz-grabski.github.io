@@ -80,14 +80,40 @@
                     </ul>
 
                     <h2>Git merge</h2>
+<pre>      A---B---C topic
+     /
+D---E---F---G master</pre>
                     
                     <p>Merging is a process of combining two branches into one. The merge commit then has two parents, one from the source branch and one from the destination. This feature enables to easily track history of changes, when was a feature branch created and when was it merged back into the destination branch.</p>
+
+<pre>      A---B---C topic
+     /         \
+    D---E---F---G---H master</pre>
 
                     <p>To perform a merge to current branch you use <code>git merge</code> command followed by branch's name</p>
 
                     <p><code>git merge feature_branch</code> will merge branch feature_branch to current branch</p>
 
+                    <h3>Merge strategies</h3>
+
+                    <p>There are several ways to perform a merge. I will not go into details but just to give you some simple examples and a heads up about what a merge strategy is and how to use it.</p>
+
+                    <ul>
+                        <li><i>recursive</i> - default merge strategy when pulling or merging one branch. Performs a merge of two branches using 3-way merge algorithm</li>
+                        <li><i>ours</i> - favouring 'our' (current branch) version of files</li>
+                        <li><i>theirs</i> - favouring 'their' (merged branch) version of files</li>
+                    </ul>
+
+                    <p>... and many, many more. See official <a href="http://git-scm.com/docs/git-merge">git manual</a> to know more about merging, strategies and algorithms (like the 3-way merge algorithm)</p>
+
+                    <p>To use a strategy you can use the <code>-s</code> switch. <code>git merge -s 'strategy' ...</code></p>
+
+
                     <h2>Git rebase</h2>
+
+                    <div class="pagination-centered">
+                        <img src="img/rebase.png" style="width:500px; margin:auto;"></img>
+                    </div>
 
                     <p>Another mean of incorporating changes from another branch is to perform a rebase. This is different from a merge in such a way that it "removes" your changes, applies changes from other branch and then reapplies your changes on top of everything.</p>
 
@@ -184,6 +210,15 @@ Hello
                     <p>To create a patch you use <code>git format-patch</code> command</p>
 
                     <p>To apply a patch you use <code>git apply</code> command</p>
+
+                    <h2>'Squashing' commits</h2>
+
+                    <p>Squashing is yet another feature of git that could simplify working. It is used to 'squeeze' changes from several commits into one. This can be particularly useful, when you would like to have only one commit related to a feature you're working on. Then it is easy to create a patch with all of changes regarding that feature.</p>
+
+                    <p>One of the methods of 'squashing' is to rebase using interactive mode</p>
+
+                    <p><code>git rebase -i HEAD~3</code></p>
+
                 </div>
             </div>
 

@@ -119,12 +119,14 @@
                     </ul>
                     <h3>git merge</h3>
                     <ul>
-                        <li><span class="label label-warning">git fetch</span> - performs a fetch from default remote (origin)</li>
-                        <li><span class="label label-warning">git fetch remote_name</span> - performs a fetch from remote_name</li>
+                        <li><span class="label label-warning">git merge branch_name</span> - performs a merge of branch_name into the current branch</li>
+                        <li><span class="label label-warning">git merge -s 'strategy' ...</span> - performs a merge of branch_name using the given strategy</li>
                     </ul>
                     <h3>git rebase</h3>
                     <ul>
                         <li><span class="label label-warning">git rebase branch_name</span> - performs a rebase of current branch on top of branch_name</li>
+                        <li><span class="label label-warning">git rebase -i HEAD~3</span> - performs a rebase on top of current branch in interactive mode. Can be used for squashing</li>
+                        
                     </ul>
                     <h3>git patch</h3>
                     <ul>

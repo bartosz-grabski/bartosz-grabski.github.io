@@ -117,8 +117,9 @@
                     <img src="img/commits.png" style="margin:auto;"></img>
                 </div>
 
+                <p>Commit is a permanently saved change of the repository's state. Git saves whole repository's state as a set of incremental changes (commits). This is different from an SVN approach, which keeps a literal snapshot of files at given time. That is why branching and other operations are fast and cheap in Git ;)</p>
 
-                <p>Commit is a permanently saved snapshot of repository's state. It is represented by a hexadecimal SHA hash value, username and email and optionally a message describing commit's contents. Some commits have special reference names. Commits point to each other forming treelike graphs. We will go deeper into trees and naming while describing branches and fetching from a remote repository.</p>
+                <p> A commit is represented by a hexadecimal SHA hash value, username and email and optionally a message describing commit's contents. Some commits have special reference names. Commits point to each other forming treelike graphs. We will go deeper into trees and naming while describing branches and fetching from a remote repository.</p>
 
                 <p>To perform a commit operation you must first add files to be commited to the staging area. This can be done by the <code>git add</code> command. Once you have file in the stagin area you can commit them by using <code>git commit</code> command. To commit all files that are tracked by git you can use <code>-a</code> switch. To add a message to the commit you use a <code>-m</code> switch followed by message's contents.</p>
 
