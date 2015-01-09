@@ -94,6 +94,19 @@ D---E---F---G master</pre>
 
                     <p><code>git merge feature_branch</code> will merge branch feature_branch to current branch</p>
 
+                    <h3>Merge fast forward</h3>
+
+                    <p>Fast forwarding is a process of moving HEAD pointer to the top of merged in branch. It can happen when there are no diverging changes and there is no need of creating a merge commit</p>
+
+                    <div class="pagination-centered">
+                        <img src="img/ff.png" style="width:500px; margin:auto;"></img>
+                    </div>
+
+                    <p>This is a default behaviour for merge. To prevent it you can use the <code>--no-ff</code> option</p>
+
+                    <p><code>git merge --no-ff branch_name</code></p>
+
+
                     <h3>Merge strategies</h3>
 
                     <p>There are several ways to perform a merge. I will not go into details but just to give you some simple examples and a heads up about what a merge strategy is and how to use it.</p>
